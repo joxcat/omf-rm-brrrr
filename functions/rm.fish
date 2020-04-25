@@ -25,7 +25,7 @@ function rm -d "Safe wrapper to delete universe"
                 read --prompt-str='Are you sure you want to delete these? (y/N) ' $some >/dev/null
                 switch $some
                 case y Y yes Yes
-                    echo /bin/rm $oldargs
+                    /bin/rm $oldargs
                 case '*'
                     echo "Pfuuu saved some cats here cap'tain"
                 end
@@ -33,7 +33,7 @@ function rm -d "Safe wrapper to delete universe"
                 echo "rm: '$argv': No such file or directory"
             end
         else
-            echo /bin/rm $oldargs
+            /bin/rm $oldargs
         end
     end
 end
